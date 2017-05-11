@@ -1,0 +1,8 @@
+/node_modules
+/client/build/bundle.js
+npm-debug.log
+.DS_Store
+
+# IntelliJ
+*.iml
+/.idea
