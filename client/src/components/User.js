@@ -9,7 +9,7 @@ export const User=(props)=>{
             </div>
             <div className="row">
                 <div className="col-lg-12">
-                    <p>Username: {props.username}</p>
+                    <p>Info: {props.username} is {props.age}</p>
                 </div>
             </div>
         </div>

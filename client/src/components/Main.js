@@ -10,7 +10,14 @@ export const Main =(props)=>{
             <div class="row">
                 <div class="col-lg-12">
                     <button class="btn btn-success" onClick={()=>props.changeUsername('Ovansa')}>
-                        Change Username</button>
+                        Change Username
+                    </button> |
+                    <button class="btn btn-primary" onClick={()=>props.changeAge(23)}>
+                        Change Age
+                    </button> |
+                    <button class="btn btn-primary" onClick={()=>props.increaseAge(1)}>
+                        Increase Age
+                    </button>
                 </div>
             </div>
         </div>
