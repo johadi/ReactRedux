@@ -26,6 +26,14 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
+    "axios": "^0.16.1",
+    "body-parser": "^1.17.1",
+    "config": "^1.26.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.8",
+    "morgan": "^1.8.1",
+    "nodemon": "^1.11.0",
+    "q": "^1.5.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",

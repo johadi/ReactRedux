@@ -13,7 +13,7 @@ export const increaseAge=(newAge)=>{
         setTimeout(()=>{
             dispatch({type: 'INCREASE_AGE',payload: newAge})
                 .then(()=>console.log('Age increased'));
-        },3000)
+        },4000)
     }
 }
 
