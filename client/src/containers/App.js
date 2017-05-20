@@ -4,7 +4,7 @@ import '../../build/css/styles.css';
 import {User} from '../components/User';
 import {Main} from '../components/Main';
 import {} from '../actions/mathsAction';
-import {setName,setAge,increaseAge} from '../actions/userAction';
+import {setName,setAge,increaseAge,saveAge} from '../actions/userAction';
 
 class App extends React.Component{
     constructor(props){
@@ -23,7 +23,7 @@ class App extends React.Component{
     render(){
         return (
             <div>
-                <Main increaseAge={this.increaseAge} changeAge={this.changeAge} changeUsername={this.changeUsername}/>
+                <Main saveAge={(name,age)=>this.props.saveAge(name,age)} increaseAge={this.increaseAge} changeAge={this.changeAge} changeUsername={this.changeUsername}/>
                 <User age={this.props.user.age} username={this.props.user.name} />
             </div>
         )
@@ -46,6 +46,9 @@ const mapDispatchToProps=(dispatch)=>{
         },
         increaseAge: ()=>{
             dispatch(increaseAge());
+        },
+        saveAge: (name,age)=>{
+            dispatch(saveAge(name,age));
         }
     }
 }

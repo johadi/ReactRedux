@@ -21,6 +21,18 @@ export const increaseAge=()=>{
             })
     }
 }
+export const saveAge=(name,age)=>{
+    return dispatch=>{
+        axios.post('/api/profile', {name, age})
+            .then(response => {
+                console.log(response);
+                dispatch({type: 'SAVE_AGE',payload: {name: response.data.name,age: response.data.age}});
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
+}
 
 
 // {type: 'INCREASE_AGE',payload: age};

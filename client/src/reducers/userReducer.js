@@ -18,6 +18,12 @@ export default (state={name: 'Okatahi', age: 89},action)=>{
                 age: state.age + action.payload
             };
             break;
+        case 'SAVE_AGE':
+            state={
+                ...state,
+                age: action.payload.age,
+                name: action.payload.name
+            }
     }
     return state;
 }

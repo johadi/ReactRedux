@@ -17,6 +17,9 @@ export const Main =(props)=>{
                     </button> |
                     <button class="btn btn-primary" onClick={()=>props.increaseAge()}>
                         Increase Age
+                    </button> |
+                    <button class="btn btn-success" onClick={()=>props.saveAge('jimoh',56)}>
+                        Save Age
                     </button>
                 </div>
             </div>
