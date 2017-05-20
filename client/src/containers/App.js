@@ -17,8 +17,8 @@ class App extends React.Component{
     changeAge=(newAge)=>{
         this.props.setAge(newAge);
     }
-    increaseAge=(number)=>{
-        this.props.increaseAge(number);
+    increaseAge=()=>{
+        this.props.increaseAge();
     }
     render(){
         return (
@@ -44,8 +44,8 @@ const mapDispatchToProps=(dispatch)=>{
         setAge: (age)=>{
             dispatch(setAge(age));
         },
-        increaseAge: (age)=>{
-            dispatch(increaseAge(age));
+        increaseAge: ()=>{
+            dispatch(increaseAge());
         }
     }
 }

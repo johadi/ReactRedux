@@ -66,8 +66,28 @@ if(TARGET === 'start' || !TARGET) {
 //
 // 0.0.0.0 is available to all network devices unlike default
 // localhost
-            host: process.env.HOST,
-            port: process.env.PORT
+//             host: process.env.HOST,
+//             port: process.env.PORT,
+//             proxy: {
+//                 "/api": {
+//                     target: "http://localhost:4000",
+//                     pathRewrite: {"^/api" : ""}
+//                 }
+//             }
+//             proxy: {
+//                 '/api/**': {
+//                     target: 'http://localhost:4000/api/',
+//                     secure: false,
+//                     changeOrigin: true
+//                 }
+//             }
+            proxy: {
+                '/api/**': {
+                    target: 'http://localhost:4000',
+                    secure: false
+                }
+            }
+            // proxy: {'/api/**': 'http://localhost:4000'}
         },
         plugins: [
             new webpack.HotModuleReplacementPlugin()
